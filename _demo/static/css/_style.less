@@ -1,0 +1,345 @@
+@import "variables";
+@import "utils";
+// 引入雪碧图
+@import "sprite";
+@import "layui-theme";
+
+
+[v-cloak] {
+  display: none;
+}
+
+// 覆盖宽度
+.container {
+  width: 1084px;
+}
+
+.homeContent {
+  background: url("/static/images/bg.jpg") no-repeat center top;
+  //background-size: contain;
+  height: 3938px;
+  min-width: 1084px;
+  overflow-x: auto;
+
+  &_header {
+    //position: absolute;
+    //top: 0;
+  }
+
+  &_links {
+    a {
+      color: #fff;
+      font-size: 18px;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:hover,
+      &.is-hover {
+        color: @color-yellow;
+        font-weight: bold;
+      }
+
+    }
+
+  }
+
+  &_dl {
+
+    &_item {
+
+      padding-left: 10px;
+
+
+      span {
+        .btn();
+        .txt-elli();
+        display: inline-block;
+        width: 580px;
+      }
+
+      color: #fff;
+      height: 40px;
+      line-height: 40px;
+    }
+
+    &_btn {
+      position: relative;
+      top: 7px;
+    }
+
+  }
+
+
+  &_reg {
+
+  }
+
+}
+
+
+.btn() {
+  cursor: pointer;
+}
+
+.btn-login {
+  .btn();
+  .sprite(@btn-login);
+}
+
+.btn-reg {
+  .btn();
+  .sprite(@btn-reg);
+}
+
+.btn-pdf {
+  .btn();
+  .sprite(@btn-pdf);
+}
+
+.btn-dl {
+  .btn();
+  .sprite(@btn-dl);
+}
+
+.tab-reg {
+  .sprite(@tab-reg);
+}
+
+.tab-bz {
+  .sprite(@tab-bz);
+}
+
+.tab-submit {
+  .sprite(@tab-submit);
+}
+
+.tab-btn-reg {
+  .sprite(@tab-btn-reg);
+}
+
+.tab-btn-bz {
+  .sprite(@tab-btn-bz);
+}
+
+.tab-btn-submit {
+  .sprite(@tab-btn-submit);
+}
+
+
+.tab-reg {
+
+}
+
+.logo {
+  .sprite(@logo);
+}
+
+
+.debug {
+  //border: 2px solid red;
+  //height: 100px;
+}
+
+
+.btnRegister {
+  background-color: @color-blue;
+  color: #fff;
+  border: none;
+  padding-right: 10px;
+  border-radius: 20px;
+  font-size: 20px;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: @color-blue;
+  }
+
+  span {
+    letter-spacing: 10px;
+  }
+}
+
+.btnVerify {
+  background-color: @color-blue;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  border-radius: 20px;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: @color-blue;
+  }
+
+  &.is-disabled {
+    background-color: @color-blue !important;
+    //border-color: none;
+    cursor: not-allowed;
+  }
+}
+
+
+.detailsContent {
+  background: url("/static/images/bg-detail-slim.png") no-repeat center top;
+  //background-size: contain;
+  min-height: 719px;
+  height: unset;
+  min-width: 1084px;
+  overflow-x: auto;
+  padding-bottom: 40px;
+
+  &_tip {
+    color: #fff;
+    font-size: 16px;
+
+    &_item {
+
+    }
+  }
+
+
+  &_search {
+
+    &_content {
+      box-shadow: 0 0px 18px 0px rgba(7, 17, 27, 0.08);
+      padding: 20px;
+      color: #333;
+    }
+
+    &_title {
+      font-weight: bold;
+      line-height: 30px;
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+  }
+
+  &_card {
+    //padding-top: 10px;
+    //padding-bottom: 10px;
+    //margin: -10px;
+    background-color: #fff;
+
+    //padding: 10px 20px 20px 20px;
+    cursor: pointer;
+
+    &_item {
+      padding-left: 10px;
+      padding-right: 10px;
+      margin-top: 20px;
+      //margin-left: -5px;
+      //margin-right: -5px;
+
+      overflow: hidden;
+      position: relative;
+      //width: 100px;
+      //height: 100px;
+      //width: 100%;
+
+
+      &_img {
+        overflow: hidden;
+        //min-height: 150px;
+        height: 294px;
+        border: 1px solid #ddd;
+        border-radius: 2px;
+
+
+        img {
+          display: block;
+          width: 100%;
+          max-width: 100%;
+          min-width: 100%;
+          transition: all linear 0.2s;
+
+          &:hover {
+            cursor: pointer;
+            transform: scale(1.1);
+          }
+
+        }
+      }
+
+
+
+      &_title {
+        //color: #fff;
+        text-align: center;
+        font-size: 16px;
+        //position: absolute;
+        //bottom: 0;
+        width: 100%;
+        margin-top: 20px;
+
+        font-size: 16px;
+        //line-height: 24px;
+        color: #666;
+      }
+
+    }
+
+  }
+}
+
+
+.shadow-card {
+  box-shadow: 0 0px 18px 0px rgba(7, 17, 27, 0.08);
+  padding: 20px;
+  color: #333;
+  background-color: #fff;
+  border-radius: 3px;
+}
+
+.projectDetail {
+
+  &_info {
+
+    &_title {
+      font-weight: bold;
+      line-height: 30px;
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+
+    &_company {
+      font-size: 16px;
+      line-height: 24px;
+      color: #666;
+    }
+
+    &_tip {
+      font-size: 20px;
+      height: 30px;
+      line-height: 30px;
+      margin: 10px 0;
+    }
+
+    &_description {
+      font-size: 16px;
+      line-height: 24px;
+      color: #666;
+    }
+  }
+
+  &_video {
+
+    &_title {
+      font-weight: bold;
+      line-height: 30px;
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+
+    &_player {
+
+    }
+
+  }
+}
